@@ -9,4 +9,4 @@
 tts
 
 # Ignore ets inside releases
-#ets-inside-*
+ets-inside-*
