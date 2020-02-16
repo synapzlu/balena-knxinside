@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  knxinside:
+    build:
+        context: ./
+    #privileged: true
+    environment:
+      ETS_PORT: 8090
+    network_mode: host

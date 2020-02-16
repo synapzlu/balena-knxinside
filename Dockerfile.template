@@ -1,0 +1,18 @@
+ARG REPO=mcr.microsoft.com/dotnet/core/runtime
+FROM $REPO:3.0-buster-slim-arm64v8
+
+
+#https://github.com/Roemer/ETS-Inside-Docker
+
+#COPY ["ETS Inside", "/ets"]
+
+WORKDIR /ets
+COPY ets-inside-5.7.085.9540.tar.gz .
+RUN tar -zxvf ets-inside-5.7.085.9540.tar.gz
+
+
+RUN apt update
+RUN apt install libuv1 libuv1-dev
+
+#ENTRYPOINT dotnet Knx.Ets.Osprey.dll --console --port=$ETS_PORT
+CMD /bin/bash
