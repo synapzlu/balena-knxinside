@@ -1,0 +1,12 @@
+
+*.log
+*.db
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+tts
+
+# Ignore ets inside releases
+ets-inside-*
